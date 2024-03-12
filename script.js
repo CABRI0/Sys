@@ -14,6 +14,18 @@ function checkSavedUsername() {
 function showNameDialog() {
     const dialogBox = document.getElementById("dialog");
     dialogBox.style.display = "block"; // Show the dialog box
+
+    // Add event listener for the "Save" button
+    const saveButton = document.getElementById("saveButton");
+    saveButton.addEventListener("click", saveUserName);
+
+    // Add event listener for the Enter key
+    const nameInput = document.getElementById("nameInput");
+    nameInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            saveUserName();
+        }
+    });
 }
 
 // Function to save the user's name
@@ -30,6 +42,7 @@ function saveUserName() {
 
 // Call the function to check saved username when the page loads
 window.addEventListener("load", checkSavedUsername);
+
 
 // Your existing code for sending messages goes here...
 // Function to send a message
