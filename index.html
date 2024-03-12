@@ -7,7 +7,8 @@
    
 </head>
 <body>
-   <div class="Main" style="width: 100%; height: 100%; position: relative;  display: flex; justify-content: center; align-items: center;">
+
+ <div class="Main" style="width: 100%; height: 100%; position: relative;  display: flex; justify-content: center; align-items: center;">
 
 <div class="Frame2" style="width: 970px; height: 591px; position: relative; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.51); border-radius: 15px; overflow: hidden; border: 1px black solid">
   <div class="Frame3" style="width: 919px; height: 52px; left: 25px; top: 24px; position: absolute; background: #A0F4FA; border-radius: 30px; overflow: hidden; border: 1px black solid">
@@ -27,8 +28,17 @@
 </div>
   </div>
 
+ <dialog id="dialog" style="border: none;background: none;">
+  <div class="Dialog" style="width: 432px; height: 187px; position: relative; background: #CCFAA7; border-radius: 15px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
+    <div class="WhatSYourName" style="color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word; margin-top: 10px;">What’s Your Name?</div>
+    <input type="text" id="nameInput" style="width: 341px; height: 50px; background: rgba(181, 176, 176, 0.32); border-radius: 15px; padding: 10px; font-size: 20px; border: none; margin: 10px 0;">
+    <button id="saveButton" style="width: 151px; height: 43px; background: #84C4FF; border: none; border-radius: 30px; overflow: hidden; margin-bottom: 10px;">
+      Save
+    </button>
+  </div>
+</dialog>
 
-
-  <script src="script.js"></script>
+  
+ <script src="script.js"></script>
 </body>
 </html>
