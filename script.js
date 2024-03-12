@@ -1,3 +1,37 @@
+// Function to check if a saved username exists
+function checkSavedUsername() {
+    const savedUserName = localStorage.getItem("user_name");
+    if (savedUserName) {
+        // A saved username exists, proceed with other logic (e.g., display welcome message)
+        console.log(`Welcome back, ${savedUserName}!`);
+    } else {
+        // No saved username found, show the dialog box
+        showNameDialog();
+    }
+}
+
+// Function to show the name dialog
+function showNameDialog() {
+    const dialogBox = document.getElementById("dialog");
+    dialogBox.style.display = "block"; // Show the dialog box
+}
+
+// Function to save the user's name
+function saveUserName() {
+    const nameInput = document.getElementById("nameInput").value.trim();
+    if (nameInput !== "") {
+        // Save the user's name (using local storage)
+        localStorage.setItem("user_name", nameInput);
+        console.log(`User name saved: ${nameInput}`);
+        // Hide the dialog box after saving
+        document.getElementById("dialog").style.display = "none";
+    }
+}
+
+// Call the function to check saved username when the page loads
+window.addEventListener("load", checkSavedUsername);
+
+// Your existing code for sending messages goes here...
 // Function to send a message
 function sendMessage() {
     var inputText = document.getElementById("messageInput").value.trim(); // Get the value of the input field
